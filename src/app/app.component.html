@@ -1,9 +1,9 @@
+<div align=center>
 <h1>
-  Bienvenido a {{ title }}
+  Proyecto {{ title }}
 </h1>
-<input type="number" [(ngModel)]="numero1"><br>
-<input type="number" [(ngModel)]="numero2"><br>
-<button (click)="sumar()">Sumar</button>
-<p>{{numero1}} + {{numero2}} = {{suma}}</p>
-<button (click)="multiplicar(numero1, numero2)">Multiplicar</button>
-<p>{{numero1}} x {{numero2}} = {{multiplicacion}}</p>
+<input type="number" #numero3 value=0><br>
+<input type="number" #numero4 value=0><br>
+<button (click)="multiplicar(numero3.value, numero4.value)">Multiplicar</button>
+<p>{{numero3.value}} x {{numero4.value}} = {{multiplicacion}}</p>
+</div>

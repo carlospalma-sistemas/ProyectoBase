@@ -6,17 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title : string = 'ProyectoBase'
-  numero1 = 65
-  numero2 = 23
-  suma = 0
-  multiplicacion = 0
+  title:string = 'Calculadora'
+  multiplicacion:number = 0
+  valor:number = 0
 
-  sumar() {
-    this.suma = this.numero1 + this.numero2
-  }
-
-  multiplicar(num1: number, num2: number) {
+  multiplicar(num1: any, num2: any) {
     this.multiplicacion = num1 * num2
   }
 }
+
+
