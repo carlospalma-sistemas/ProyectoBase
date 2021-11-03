@@ -15,7 +15,12 @@
     <p>{{numero3}} + {{numero4}} = {{multiplicacion}}</p>
   </div>
   <p>Resultados anteriores:<br></p>
-  <ng-template *ngFor="let res of resultados">
-      <p>{{res}}</p>
-  </ng-template>
+  <div *ngFor="let res of resultados">
+    <div *ngIf="res>0; else otro">{{res}}</div>
+    <ng-template #otro>
+      <div style="color: red;">{{res}}</div>
+    </ng-template>
+  </div>
 </div>
+
+<app-form-persona></app-form-persona>
