@@ -2,20 +2,23 @@
   <h1>
   Proyecto {{ title }}
   </h1>
-  <div>
-    <input type="number" #numero1 value=0><br>
-    <input type="number" #numero2 value=0><br>
-    <button (click)="sumar(numero1.value, numero2.value)">Sumar</button>
-    <p>{{numero1.value}} + {{numero2.value}} = {{suma}}</p>
+  <div class="card" style="width: 24rem;">
+    <div class="card-body">
+      <input type="number" #numero1 value=0><br>
+      <input type="number" #numero2 value=0><br>
+      <button class="btn btn-primary" (click)="sumar(numero1.value, numero2.value)">Sumar</button>
+      <p>{{numero1.value}} + {{numero2.value}} = {{suma}}</p>
+    </div>
   </div>
-  <div>
+  <div class="mt-4">
     <input type="number" [(ngModel)]=numero3 value=0><br>
     <input type="number" [(ngModel)]=numero4 value=0><br>
     <button (click)="multiplicar()">Multiplicar</button>
     <p>{{numero3}} + {{numero4}} = {{multiplicacion}}</p>
   </div>
   <p>Resultados anteriores:<br></p>
-  <ng-template *ngFor="let res of resultados">
-      <p>{{res}}</p>
-  </ng-template>
+  <div *ngFor="let res of resultados">
+  <p *ngIf="res>0; else otro">{{res}}</p>
+  <ng-template #otro><div style="color: red;">{{res}}</div></ng-template>
+  </div>
 </div>
