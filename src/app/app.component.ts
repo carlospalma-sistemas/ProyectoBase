@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title: string = 'Calculadora'
+    mensaje:string = ''
 
     numero3: number = 0
     numero4: number = 0
@@ -22,6 +23,12 @@ export class AppComponent {
     multiplicar(): void {
         this.multiplicacion = this.numero3 * this.numero4
         this.resultados.push(this.multiplicacion)
+        if (this.multiplicacion > 0) {
+            this.mensaje = 'Dato superior a 0'
+        }
+        else {
+             this.mensaje = ''   
+        }
     }
 }
 
