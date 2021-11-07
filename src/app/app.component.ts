@@ -1,35 +1,26 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title: string = 'Calculadora'
-    mensaje:string = ''
+  title:string = 'ProyectoBase';
+  resultado:number = 0;
+  resultado2:number = 0;
+  v3:number = 0;
+  v4:number = 0;
 
-    numero3: number = 0
-    numero4: number = 0
-    suma: number = 0
-    multiplicacion: number = 0
-    resultados: number[] = []
+  sumar(v1:string, v2:string):void {
+    this.resultado = Number(v1)+Number(v2);
+  }
 
-    sumar(num1: string, num2: string): void {
-        this.suma = Number(num1) + Number(num2)
-        this.resultados.push(this.suma)
-    }
-
-    multiplicar(): void {
-        this.multiplicacion = this.numero3 * this.numero4
-        this.resultados.push(this.multiplicacion)
-        if (this.multiplicacion > 0) {
-            this.mensaje = 'Dato superior a 0'
-        }
-        else {
-             this.mensaje = ''   
-        }
-    }
+  multiplicar():void {
+    this.resultado2 = this.v3 * this.v4;
+  }
 }
+
 
 

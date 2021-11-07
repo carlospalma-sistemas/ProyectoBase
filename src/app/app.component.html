@@ -1,25 +1,10 @@
-<div align=center>
-  <h1>
-  Proyecto {{ title }}
-  </h1>
-  <div>
-    <input type="number" #numero1 value=0><br>
-    <input type="number" #numero2 value=0><br>
-    <button (click)="sumar(numero1.value, numero2.value)">Sumar</button>
-    <p>{{numero1.value}} + {{numero2.value}} = {{suma}}</p>
-  </div>
-  <div>
-    <input type="number" [(ngModel)]=numero3 value=0><br>
-    <input type="number" [(ngModel)]=numero4 value=0><br>
-    <button (click)="multiplicar()">Multiplicar</button>
-    <p>{{numero3}} + {{numero4}} = {{multiplicacion}}</p>
-    <p>{{mensaje}}</p>
-  </div>
-  <p>Resultados anteriores:<br></p>
-  <div *ngFor="let res of resultados">
-    <div *ngIf="res>0; else otro">{{res}}</div>
-    <ng-template #otro>
-      <div style="color: red;">{{res}}</div>
-    </ng-template>
-  </div>
-</div>
+<h2>Bienvenidos a {{title}}</h2>
+Valor 1: <input type="number" #valor1><br>
+Valor 2: <input type="number" #valor2><br>
+<button (click)="sumar(valor1.value, valor2.value)">Sumar</button><br>
+<p>La suma de {{valor1.value}} + {{valor2.value}} = {{resultado}}</p>
+<br>
+Valor 3: <input type="number" [(ngModel)]=v3 value=0><br>
+Valor 4: <input type="number" [(ngModel)]=v4 value=0><br>
+<button (click)="multiplicar()">Multiplicar</button><br>
+<p>La multiplicación de {{v3}} * {{v4}} = {{resultado2}}</p>
