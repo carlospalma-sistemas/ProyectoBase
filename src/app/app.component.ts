@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ProyectoBase';
+  title:string = 'Que pasen un feliz fin de semana';
+  valor:number = 0;
+
+  cambiar():void {
+    this.valor = this.valor + 1;  
+  }
 }

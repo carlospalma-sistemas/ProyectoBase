@@ -1,0 +1,96 @@
+<!-- FORMULARIO -->
+<div>
+	<form class="container mt-5">
+		<h3>Nuevo arrendatario</h3>
+		<hr>
+		<div>
+			<input type="hidden" id="txtId" name="txtId" value="" readonly>
+		</div>
+		<div class="row">
+			<div class="mb-3 col-sm-6">
+				<label for="txtNombres" class="form-label form-control-sm mb-0">Nombres</label>
+				<input type="text" class="form-control form-control-sm col-sm-12" id="txtNombres" name="txtNombres" value=""  required>
+			</div>
+			<div class="mb-3 col-sm-6">
+				<label for="txtApellidos" class="form-label form-control-sm mb-0">Apellidos</label>
+				<input type="text" class="form-control form-control-sm col-sm-12" id="txtApellidos" name="txtApellidos" value="" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mb-3 col-sm-3">
+				<label for="selTipo" class="form-label form-control-sm mb-0">Tipo identificación</label>
+				<select class="form-select form-select-sm col-sm-12" id="selEstado" name="selTipo" required>
+					<option selected value="">Seleccione tipo</option>
+					<option value="Cédula">Cédula</option>
+					<option value="Pasaporte">Pasaporte</option>
+					<option value="Otro">Otro</option>
+				</select>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtIdentificacion" class="form-label form-control-sm mb-0">Identificación</label>
+				<input type="text" class="form-control form-control-sm col-sm-12" id="txtIdentificacion" name="txtIdentificacion" value="" required>
+			</div>
+			<div class="mb-3 col-sm-6">
+				<label for="dtpFechaNac" class="form-label form-control-sm mb-0">Fecha nacimiento</label>
+				<input type="date" class="form-control form-control-sm col-sm-12" id="dtpFechaNac" name="dtpFechaNac" value="" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mb-3 col-sm-6">
+				<label for="txtDireccion" class="form-label form-control-sm mb-0">Dirección residencia</label>
+				<input type="text" class="form-control form-control-sm col-sm-12" id="txtDireccion" name="txtDireccion" value="" required>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="selCiudad" class="form-label form-control-sm mb-0">Ciudad residencia</label>
+				<select class="form-select form-select-sm col-sm-12" id="selEstado" name="selCiudad" required>
+					<option selected value="">Seleccione ciudad</option>
+					<option value="Administrador">Medellín</option>
+					<option value="Solicitante">Bello</option>
+					<option value="Solicitante">Itagüí</option>
+					<option value="Solicitante">Envigado</option>
+					<option value="Solicitante">Sabaneta</option>
+				</select>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtTelefono" class="form-label form-control-sm mb-0">Teléfono</label>
+				<input type="tel" class="form-control form-control-sm col-sm-12" id="txtTelefono" name="txtTelefono" pattern="[0-9]{10}" value="" placeholder="Ingrese número de 10 dígitos" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mb-3 col-sm-6">
+				<label for="txtCorreo" class="form-label form-control-sm mb-0">Correo electrónico</label>
+				<input type="email" class="form-control form-control-sm col-sm-12" id="txtCorreo" name="txtCorreo" value="" required>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtPassword" class="form-label form-control-sm mb-0">Contraseña</label>
+				<input type="password" class="form-control form-control-sm col-sm-12" id="txtPassword" name="txtPassword" value="" required>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtPasswordConfirm" class="form-label form-control-sm mb-0">Confirmar Contraseña</label>
+				<input type="password" class="form-control form-control-sm col-sm-12" id="txtPasswordConfirm" name="txtPasswordConfirm" value="" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mb-3 col-sm-3">
+				<label for="txtRefLaboral" class="form-label form-control-sm mb-0">Referencia laboral</label>
+				<input type="text" class="form-control form-control-sm col-sm-12" id="txtRefLaboral" name="txtRefLaboral" value="" required>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtTelRefLaboral" class="form-label form-control-sm mb-0">Tel. referencia laboral</label>
+				<input type="tel" class="form-control form-control-sm col-sm-12" id="txtTelRefLaboral" name="txtTelRefLaboral" pattern="[0-9]{10}" value="" required>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtRefPersonal" class="form-label form-control-sm mb-0">Referencia personal</label>
+				<input type="text" class="form-control form-control-sm col-sm-12" id="txtRefPersonal" name="txtRefPersonal" value="" required>
+			</div>
+			<div class="mb-3 col-sm-3">
+				<label for="txtTelRefPersonal" class="form-label form-control-sm mb-0">Tel. referencia personal</label>
+				<input type="tel" class="form-control form-control-sm col-sm-12" id="txtTelRefPersonal" name="txtTelRefPersonal" pattern="[0-9]{10}" value="" required>
+			</div>
+		</div>
+		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+			<button type="submit" class="btn btn-primary" id="btnSubmit" name="btnSubmit">Guardar</button>
+			<button type="submit" class="btn btn-secondary" id="btnCancelar" name="btnCancelar">Cancelar</button>
+		</div>
+	</form>
+</div>
