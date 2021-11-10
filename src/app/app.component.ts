@@ -11,6 +11,31 @@ export class AppComponent {
   val3:number = 0;
   val4:number = 0;
   multiplicacion:number = 0;
+  arreglo:Array<number>=[];
+  arreglo2:number[] = [];
+  objeto:{ dato1:string, dato2:string } = {"dato1" : "", "dato2" : ""};
+
+  objetoPersona = {
+    "nombre": "Carlos",
+    "apellido": "Palma",
+    "hijos": [{
+        "nombre": "Eduardito",
+        "apellido": "Palma"
+      },
+      {
+        "nombre": "Sergito",
+        "apellido": "Palma"
+      },
+      {
+        "nombre": "Andreita",
+        "apellido": "Palma"
+      }
+    ]
+  };
+  nombreHijo:string="";
+
+  nombre:string = "";
+  apellido:string = "";
 
   cambiarTitulo(titulo:string):void {
     this.title = titulo
@@ -22,5 +47,20 @@ export class AppComponent {
 
   multiplicar():void {
     this.multiplicacion = this.val3 * this.val4
+  }
+
+  crearArreglo():void {
+    this.arreglo2 = [this.val3, this.val4]
+  }
+  
+  crearObjeto():void {
+    this.objeto = {
+      "dato1" : this.nombre,
+      "dato2" : this.apellido
+    }
+  }
+
+  accederAHijo():void {
+    this.nombreHijo = this.objetoPersona.hijos[1].nombre
   }
 }

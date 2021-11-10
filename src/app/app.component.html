@@ -11,3 +11,10 @@ Ingresar valor 3: <input type="number" [(ngModel)]=val3>
 Ingresar valor 4: <input type="number" [(ngModel)]=val4>
 <button (click)="multiplicar()">Multiplicar</button>
 <p>La multiplicación de {{val3}} * {{val4}} = {{val3 * val4}}</p>
+
+
+Ingresar nombre: <input type="text" [(ngModel)]=nombre>
+Ingresar apellido: <input type="text" [(ngModel)]=apellido>
+
+<button (click)="accederAHijo()">Crear objeto</button>
+{{nombreHijo}}
